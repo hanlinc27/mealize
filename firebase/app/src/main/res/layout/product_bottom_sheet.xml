@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+  <TextView
+      android:id="@+id/bottom_sheet_title"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/bottom_sheet_title_margin"
+      android:ellipsize="end"
+      android:fontFamily="sans-serif"
+      android:maxLines="1"
+      android:textColor="@color/black"
+      android:textSize="@dimen/bottom_sheet_title_size"
+      android:text="let's make something cool with"
+      android:textAlignment="center"
+      android:paddingTop="5dp"/>
+
+  <Button
+      android:id="@+id/bottom_sheet_button"
+      android:layout_width="200dp"
+      android:layout_gravity="center"
+      android:layout_height="50dp"
+      android:ellipsize="end"
+      android:fontFamily="sans-serif"
+      android:maxLines="1"
+      android:textColor="@color/white"
+      android:textSize="@dimen/bottom_sheet_title_size"
+      android:layout_marginTop="-15dp"
+      android:onClick="open_information"
+      android:textAllCaps="false"
+      android:backgroundTint="@color/darkBlue" />
+
+  <ImageView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:drawable="@drawable/logo"
+      android:layout_marginTop="20dp"
+      android:layout_marginBottom="10dp"/>
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/divider_height"
+      android:background="@color/lighter_grey"/>
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/product_recycler_view"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scrollbars="vertical"/>
+
+</LinearLayout>
