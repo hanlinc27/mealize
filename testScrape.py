@@ -7,7 +7,7 @@ ITEM_URL = '%s/items/' % BACKEND_URL
 
 def scrape_item(item_id):
     return requests.get(
-        "%s/%s" % (ITEM_URL, item_id,)
+        %s/%s % (ITEM_URL, item_id,)
     ).json()
 
 def search(query, postal_code):
