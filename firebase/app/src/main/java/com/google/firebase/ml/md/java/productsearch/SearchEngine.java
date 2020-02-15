@@ -95,7 +95,7 @@ public class SearchEngine {
     try {
       FirebaseVisionOnDeviceAutoMLImageLabelerOptions options =
               new FirebaseVisionOnDeviceAutoMLImageLabelerOptions.Builder(localModel)
-                      .setConfidenceThreshold(0.3f)  // Evaluate your model in the Firebase console
+                      .setConfidenceThreshold(0.5f)  // Evaluate your model in the Firebase console
                       // to determine an appropriate value.
                       .build();
       labeler = FirebaseVision.getInstance().getOnDeviceAutoMLImageLabeler(options);
@@ -137,22 +137,22 @@ public class SearchEngine {
   }
 
   public static String display_name(String label) {
-      if (label.equals("plastic_cups"))
-          return "Plastic Cups";
-      else if (label.equals("water_bottle_caps"))
-          return "Bottle Caps";
-      else if (label.equals("milk_cartons"))
-          return "Milk Cartons";
-      else if (label.equals("paper_coffee_cups"))
-          return "Coffee Cups";
-      else if (label.equals("soda_cans"))
-          return "Soda Cans";
-      else if (label.equals("plastic_bags"))
-          return "Plastic Bags";
-      else if (label.equals("plastic_bottles"))
-          return "Plastic Bottles";
-      else if (label.equals("plastic_bags"))
-          return "Plastic Bags";
+      if (label.equals("Carrot"))
+          return "Carrot";
+      else if (label.equals("Pasta"))
+          return "Pasta";
+      else if (label.equals("Salmon"))
+          return "Salmon";
+      else if (label.equals("Tomato"))
+          return "Tomato";
+      else if (label.equals("Egg"))
+          return "Egg";
+      else if (label.equals("Spinach"))
+          return "Spinach";
+      else if (label.equals("Lemon"))
+          return "Lemon";
+      else if (label.equals("Mushroom"))
+          return "Mushroom";
       else return "Please try again";
   }
 
