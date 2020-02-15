@@ -1,9 +1,8 @@
-plastic_cups
-plastic_containers_food
-plastic_straws
-water_bottle_caps
-milk_cartons
-paper_coffee_cups
-soda_cans
-plastic_bags
-plastic_bottles
+Carrot
+Pasta
+Salmon
+Tomato
+Egg
+Spinach
+Mushroom
+Lemon
