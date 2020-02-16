@@ -50,12 +50,12 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision-object-detection-model:19.0.3'
     implementation 'com.google.firebase:firebase-ml-vision-automl:18.0.3'
 
-    // Volley Dependencies
-    //implementation 'com.android.volley:volley:1.1.1'
-    implementation("com.squareup.okhttp3:okhttp:4.3.1")
+
+    implementation 'com.squareup.retrofit2:retrofit:2.7.1'
 
     api 'com.google.guava:guava:27.1-jre'
     implementation files('src\\main\\java\\com\\google\\firebase\\ml\\md\\json-simple-1.1.jar')
+    implementation files('src\\main\\java\\com\\google\\firebase\\ml\\md\\json-20190722.jar')
 }
 
 apply plugin: 'com.google.gms.google-services'

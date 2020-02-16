@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 public class page_5 extends AppCompatActivity {
 
+    public int restriction_button_index = 0;
+
     @Override
     protected void onCreate(@Nullable Bundle bundle) {
         super.onCreate(bundle);
@@ -20,10 +22,32 @@ public class page_5 extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
     }
 
-    public void page_5_button(View view) {
+    public void page_5_button_1(View view) {
+        restriction_button_index = 0;
+
         Intent intent = new Intent(page_5.this, page_6.class);
         startActivity(intent);
 
+    }
+
+    public void page_5_button_2(View view) {
+        restriction_button_index = 1;
+
+        Intent intent = new Intent(page_5.this, page_6.class);
+        startActivity(intent);
+
+    }
+
+    public void page_5_button_3(View view) {
+        restriction_button_index = 2;
+
+        Intent intent = new Intent(page_5.this, page_6.class);
+        startActivity(intent);
+
+    }
+    public void page_5_skip_button (View view) {
+        Intent intent = new Intent(page_5.this, page_6.class);
+        startActivity(intent);
     }
 }
 

@@ -42,6 +42,11 @@
         android:screenOrientation="portrait"/>
 
     <activity
+        android:name=".page_3a"
+        android:exported="false"
+        android:screenOrientation="portrait"/>
+
+    <activity
         android:name=".page_4"
         android:exported="false"
         android:screenOrientation="portrait"/>

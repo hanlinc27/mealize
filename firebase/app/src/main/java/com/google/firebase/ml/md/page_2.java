@@ -4,13 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.TextView;
+
+import java.util.ArrayList;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 public class page_2 extends AppCompatActivity {
+
+    public static GroceryFetcher gf = new GroceryFetcher();
 
     EditText user_edit;
 
@@ -26,13 +29,14 @@ public class page_2 extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
     }
 
-    public void page_2_button(View view) throws java.io.IOException, org.json.simple.parser.ParseException {
+    public void page_2_button(View view) throws Exception {
         String postalCode = user_edit.getText().toString();
-        postalCode = GroceryFetcher.getValidPostalCode("l4h2w8");
-        GroceryFetcher.getGroceryInfo(postalCode);
+        System.out.println(postalCode);
 
-        //Intent intent = new Intent(page_2.this, page_3.class);
-        //startActivity(intent);
+        gf.getGroceryStores(postalCode);
+
+        Intent intent = new Intent(page_2.this, page_3.class);
+        startActivity(intent);
 
     }
 }
