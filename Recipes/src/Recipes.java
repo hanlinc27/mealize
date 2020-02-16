@@ -1,14 +1,10 @@
 import java.io.*;
-import java.lang.reflect.Array;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
-import java.util.Objects;
+import java.util.Collections;
 
 import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 
@@ -24,25 +20,44 @@ public class Recipes {
             this.imageURL = imageURL;
         }
     }
-    static class RecipeItem {
-        ArrayList <String> ingredients;
+    static class RecipeItem implements Comparable{
+        String name;
+        ArrayList <String> allIngredients;
+        ArrayList <String> keyIngredients;
         ArrayList <GroceryItem> saleItems;
-        RecipeItem() {
-            ingredients = new ArrayList<>();
+        int score;
+        RecipeItem(String s) {
+            name = s;
+            score = 0;
+            allIngredients = new ArrayList<>();
+            keyIngredients = new ArrayList<>();
             saleItems = new ArrayList<>();
         }
 
+        @Override
+        public int compareTo(Object o) {
+            return this.score - ((RecipeItem)o).score;
+        }
     }
 
-    public static void getRecipes(ArrayList<GroceryItem> items) {
+    public static ArrayList<RecipeItem> getRecipes(ArrayList<GroceryItem> items, ArrayList<String> itemsAlreadyHas) {
         ArrayList<RecipeItem> recipes = new ArrayList<>();
-        ArrayList<String>commonIngredients = new ArrayList<>();
+        ArrayList<String> commonIngredients = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(new File("commonIngredients.txt")));
             String in;
             while((in = br.readLine()) != null) {
                 commonIngredients.add(in);
             }
+            /**replace grocery sale items with common names**/
+            for(GroceryItem i:items) {
+                for(String s:commonIngredients) {
+                    if(i.name.contains(s)) {
+                        i.name = s;
+                    }
+                }
+            }
+            /**index the recipes form JSON file**/
             String raw = new String((Files.readAllBytes(Paths.get("recipes_raw.json"))));
             JSONObject jo = new JSONObject(raw);
             JSONArray id = jo.names();
@@ -50,30 +65,51 @@ public class Recipes {
                 JSONObject cur = (JSONObject) jo.get((String)id.get(i));
                 try {
                     JSONArray ingredientsList = (JSONArray) cur.get("ingredients");
-                    recipes.add(new RecipeItem());
+                    recipes.add(new RecipeItem(cur.getString("title")));
                     for(int j = 0; j < ingredientsList.length(); ++j) {
-                        int cnt = 0;
-                        recipes.get(i).ingredients.add((String)ingredientsList.get(j));
-                        for(int k = 0; k < commonIngredients.size(); ++k) {
-                            if(recipes.get(i).ingredients.get(j).contains(commonIngredients.get(k))) {
-                                System.out.println(commonIngredients.get(k) + " " + cnt);
-                                ++cnt;
+                        recipes.get(i).allIngredients.add((String) ingredientsList.get(j));
+                        for (String s : commonIngredients) {
+                            if (((String) ingredientsList.get(j)).contains(s)) {
+                                recipes.get(i).keyIngredients.add(s);
                             }
                         }
                     }
                 } catch(Exception e) {
                 }
             }
-            System.out.println(recipes.size());
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-
+        /**score each recipe item**/
+        ArrayList<RecipeItem> ret = new ArrayList<>();
+        for (int i1 = 0; i1 < recipes.size(); i1++) {
+            RecipeItem r = recipes.get(i1);
+            for (GroceryItem g : items) {
+                for (String s : r.keyIngredients) {
+                    if (s.contains(g.name)) {
+                        ++r.score;
+                        r.saleItems.add(g); //store the item thats on sale
+                    }
+                }
+            }
+            for (String i : itemsAlreadyHas) {
+                for (String s : r.allIngredients) {
+                    if (s.contains(i)) {
+                        r.score = 9999; //high score for items that user already has
+                    }
+                }
+            }
+            Collections.sort(recipes);
+            for (int i = 0; i < 25; ++i) {
+                ret.add(recipes.get(i));
+            }
+        }
+        System.out.println("hello");
+        return ret;
     }
     public static void main(String[] args) {
-        getRecipes(new ArrayList<>());
+        getRecipes(new ArrayList<>(), new ArrayList<>());
 
     }
 }
