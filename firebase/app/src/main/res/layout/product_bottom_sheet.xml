@@ -29,7 +29,7 @@
       android:textColor="@color/colorWhite"
       android:textSize="@dimen/bottom_sheet_title_size"
       android:layout_marginTop="-5dp"
-      android:onClick="open_information"
+      android:onClick="page_6_button"
       android:textAllCaps="false"
       android:backgroundTint="@color/colorRed" />
 
