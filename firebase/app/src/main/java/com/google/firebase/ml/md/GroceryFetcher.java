@@ -1,5 +1,12 @@
 package com.google.firebase.ml.md;
 
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+
 import java.lang.Object;
 import java.net.*;
 import java.io.*;
@@ -9,6 +16,8 @@ import java.util.Scanner;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.*;
+
+import okhttp3.OkHttpClient;
 
 public class GroceryFetcher {
     private final static int NUM_STORES = 15;
@@ -28,7 +37,7 @@ public class GroceryFetcher {
             getGroceryInfo(postal_code);
         }
     }
-    private static String getValidPostalCode(String postalCode) {
+    static String getValidPostalCode(String postalCode) {
         if (!isPostalCodeValid(postalCode)) {
             postalCode = postalCode.replaceAll(" ", "");
             if (!isPostalCodeValid(postalCode)) {
@@ -55,13 +64,18 @@ public class GroceryFetcher {
         }
         return result;
     }
-    private static void getGroceryInfo(String postalCode) throws IOException, ParseException {
+    public static void getGroceryInfo(String postalCode) throws IOException, ParseException {
         // validate postal code?
+        // disconnect reader?
         URL url = new URL(BASE_URL + FLYER_URL + postalCode);
+        //RequestQueue queue = Volley.newRequestQueue(this);
         System.out.println("... fetching data from " + BASE_URL + FLYER_URL + postalCode);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
         connection.setRequestMethod("GET");
-        BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+        connection.setConnectTimeout(15000);
+        connection.setReadTimeout(15000);
+        InputStreamReader iStreamReader = new InputStreamReader(connection.getInputStream());
+        BufferedReader in = new BufferedReader(iStreamReader);
         StringBuilder result = new StringBuilder();
         String toAppend;
         while ((toAppend = in.readLine()) != null) {
