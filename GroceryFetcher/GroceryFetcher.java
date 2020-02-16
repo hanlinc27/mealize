@@ -29,7 +29,7 @@ public class GroceryFetcher {
 //        }
         ArrayList <String> has = new ArrayList<>();
         has.add("lemon");
-        ArrayList<RecipeItem> test = Recipe.getRecipes(getGroceryInfo("M2J3Z5"), has);
+        ArrayList<RecipeItem> test = Recipe.getRecipes(getGroceryInfo(DEFAULT_PC), has);
         for(RecipeItem i : test) {
             System.out.print(i.name + ": [");
             for (String s : i.keyIngredients) {
@@ -40,8 +40,7 @@ public class GroceryFetcher {
                 System.out.print(g.name + ", ");
             }
             System.out.print("]");
-            System.out.println(i.intructions);
-        }
+}
         System.out.println("Total Recipes: " + test.size());
 //        ArrayList<GroceryItem> list = getGroceryInfo("M2J3Z5");
 //        for (GroceryItem g : list) {
