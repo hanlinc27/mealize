@@ -100,12 +100,11 @@ public class Recipes {
                     }
                 }
             }
-            Collections.sort(recipes);
-            for (int i = 0; i < 25; ++i) {
-                ret.add(recipes.get(i));
-            }
         }
-        System.out.println("hello");
+        Collections.sort(recipes);
+        for (int i = 0; i < 25; ++i) {
+            ret.add(recipes.get(i));
+        }
         return ret;
     }
     public static void main(String[] args) {
