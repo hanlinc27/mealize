@@ -40,7 +40,7 @@ public class GroceryFetcher {
                 System.out.print(g.name + ", ");
             }
             System.out.print("]");
-            System.out.println(i.score);
+            System.out.println(i.intructions);
         }
         System.out.println("Total Recipes: " + test.size());
 //        ArrayList<GroceryItem> list = getGroceryInfo("M2J3Z5");

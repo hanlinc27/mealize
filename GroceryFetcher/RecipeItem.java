@@ -1,14 +1,15 @@
 import java.util.ArrayList;
 
 class RecipeItem implements Comparable {
-    String name;
+    String name, intructions;
     ArrayList<String> allIngredients;
     ArrayList<String> keyIngredients;
     ArrayList<GroceryItem> saleItems;
     int score;
 
-    RecipeItem(String s) {
-        name = s;
+    RecipeItem(String n, String i) {
+        name = n;
+        intructions = i;
         score = 0;
         allIngredients = new ArrayList<>();
         keyIngredients = new ArrayList<>();

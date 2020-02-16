@@ -33,7 +33,7 @@ class Recipe {
                 JSONObject cur = (JSONObject) jo.get((String) id.get(i));
                 try {
                     JSONArray ingredientsList = (JSONArray) cur.get("ingredients");
-                    recipes.add(new RecipeItem(cur.getString("title")));
+                    recipes.add(new RecipeItem(cur.getString("title"), cur.getString("instructions")));
                     for (int j = 0; j < ingredientsList.length(); ++j) {
                         recipes.get(i).allIngredients.add((String) ingredientsList.get(j));
                         for (String s : commonIngredients) {
