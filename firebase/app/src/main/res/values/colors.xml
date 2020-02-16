@@ -25,4 +25,10 @@
   <color name="lightGreen">#9CE2A7</color>
   <color name="darkGrey">#333333</color>
   <color name="darkGreen">#4CAB96</color>
+
+  <color name="colorRed">#ED6E58</color>
+  <color name="colorYellow">#FED892</color>
+  <color name="colorBlue">#74D5DE</color>
+  <color name="colorWhite">#FFFFFF</color>
+  <color name="colorGrey">#333333</color>
 </resources>

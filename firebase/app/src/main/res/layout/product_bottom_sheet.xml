@@ -5,16 +5,16 @@
     android:background="@color/white"
     android:orientation="vertical">
   <TextView
-      android:id="@+id/bottom_sheet_title"
+      android:id="@+id/bottom_sheet_title_text"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
       android:layout_margin="@dimen/bottom_sheet_title_margin"
       android:ellipsize="end"
       android:fontFamily="sans-serif"
       android:maxLines="1"
-      android:textColor="@color/black"
+      android:textColor="@color/colorRed"
       android:textSize="@dimen/bottom_sheet_title_size"
-      android:text="let's make something cool with"
+      android:text="let's make something with:"
       android:textAlignment="center"
       android:paddingTop="5dp"/>
 
@@ -26,18 +26,18 @@
       android:ellipsize="end"
       android:fontFamily="sans-serif"
       android:maxLines="1"
-      android:textColor="@color/white"
+      android:textColor="@color/colorWhite"
       android:textSize="@dimen/bottom_sheet_title_size"
-      android:layout_marginTop="-15dp"
+      android:layout_marginTop="-5dp"
       android:onClick="open_information"
       android:textAllCaps="false"
-      android:backgroundTint="@color/darkBlue" />
+      android:backgroundTint="@color/colorRed" />
 
   <ImageView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:drawable="@drawable/logo"
-      android:layout_marginTop="20dp"
+      android:layout_marginTop="30dp"
       android:layout_marginBottom="10dp"/>
 
   <View

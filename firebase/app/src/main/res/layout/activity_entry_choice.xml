@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white"
+    android:background="@color/colorRed"
     tools:context=".EntryChoiceActivity">
 
     <ImageView
@@ -22,9 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
         android:gravity="center_vertical"
-        android:text="ecolens"
+        android:text="flatch"
         android:textAlignment="center"
-        android:textColor="@color/darkBlue"
+        android:textColor="@color/colorWhite"
         android:textSize="45dp"
         android:textStyle="bold" />
 
@@ -32,9 +32,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="0dp"
-        android:text="see change differently"
+        android:text="real meal deals"
         android:textAlignment="center"
-        android:textColor="@color/lightGreen"
+        android:textColor="@color/colorWhite"
         android:textStyle="bold"
         android:textSize="20dp" />
 
@@ -42,28 +42,21 @@
         android:id="@+id/imageView2"
         android:layout_width="230dp"
         android:layout_height="274dp"
-        android:layout_marginLeft="135dp"
-        android:layout_marginTop="55dp"
-        app:srcCompat="@drawable/person" />
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/shopping_cart_image" />
 
     <Button
         android:id="@+id/capture_button"
         android:layout_width="150dp"
         android:layout_height="55dp"
         android:layout_marginLeft="125dp"
-        android:layout_marginTop="-122dp"
-        android:backgroundTint="@color/darkBlue"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/colorWhite"
         android:onClick="open_camera"
-        android:text="capture"
+        android:text="enter"
         android:textAllCaps="false"
-        android:textColor="@color/white"
+        android:textColor="@color/colorRed"
         android:textSize="20dp" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="424dp"
-        android:layout_height="330dp"
-        android:layout_marginLeft="-10dp"
-        android:layout_marginTop="-15dp"
-        app:srcCompat="@drawable/plants" />
 </LinearLayout>

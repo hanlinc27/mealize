@@ -271,7 +271,7 @@ public class LiveObjectDetectionActivity extends AppCompatActivity implements On
     bottomSheetScrimView = findViewById(R.id.bottom_sheet_scrim_view);
     bottomSheetScrimView.setOnClickListener(this);
 
-    bottomSheetTitleView = findViewById(R.id.bottom_sheet_title);
+    bottomSheetTitleView = findViewById(R.id.bottom_sheet_title_text);
     bottomSheetButton = (Button) findViewById(R.id.bottom_sheet_button);
 //    bottomSheetButton.setOnClickListener(this);
     productRecyclerView = findViewById(R.id.product_recycler_view);
