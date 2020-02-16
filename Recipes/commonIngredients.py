@@ -15,7 +15,7 @@ most_common = collections.Counter(split_).most_common(250)
 print(most_common)
 print(most_common[0][0])
 
-with open('Recipes\\commonIngredients.csv', mode='w') as commonIngredients:
+with open('Recipes\\commonIngredients.txt', mode='w') as commonIngredients:
     writ = csv.writer(commonIngredients)
     for i in range(len(most_common)):    
         writ.writerow(most_common[i][0])

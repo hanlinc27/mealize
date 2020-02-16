@@ -22,13 +22,39 @@
         android:value="@integer/google_play_services_version"/>
 
     <activity
-        android:name=".EntryChoiceActivity"
+        android:name=".page_1"
         android:exported="true"
         android:screenOrientation="portrait">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
         <category android:name="android.intent.category.LAUNCHER"/>
       </intent-filter>
+    </activity>
+
+    <activity
+        android:name=".page_2"
+        android:exported="false"
+        android:screenOrientation="portrait"/>
+
+    <activity
+        android:name=".page_3"
+        android:exported="false"
+        android:screenOrientation="portrait"/>
+
+    <activity
+        android:name=".page_4"
+        android:exported="false"
+        android:screenOrientation="portrait"/>
+
+    <activity
+        android:name=".page_5"
+        android:exported="false"
+        android:screenOrientation="portrait"/>
+
+    <activity
+        android:name=".page_6"
+        android:exported="true"
+        android:screenOrientation="portrait">
     </activity>
 
     <activity

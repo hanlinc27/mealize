@@ -51,6 +51,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-ml-vision-automl:18.0.3'
 
     api 'com.google.guava:guava:27.1-jre'
+    implementation files('src\\main\\java\\com\\google\\firebase\\ml\\md\\json-simple-1.1.jar')
 }
 
 apply plugin: 'com.google.gms.google-services'
