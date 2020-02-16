@@ -69,12 +69,11 @@ class Recipe {
                 }
             }
         }
-        for(RecipeItem r:recipes) {
-            if(r.score>1) {
-                ret.add(r);
-            }
+        Collections.sort(recipes);
+        for(int i = 0; i < 25; ++i) {
+            ret.add(recipes.get(i));
         }
-
+        Collections.sort(ret);
         return ret;
     }
 }

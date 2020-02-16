@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="016e413f-58ff-4464-96b2-42af5b872604" name="Default Changelist" comment="" />
+    <list default="true" id="016e413f-58ff-4464-96b2-42af5b872604" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GroceryFetcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/GroceryFetcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Recipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/Recipe.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecipeItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/RecipeItem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryFetcher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryFetcher.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryItem.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/GroceryStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/Recipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/Recipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/GroceryFetcher/RecipeItem.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/GroceryFetcher/RecipeItem.class" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,11 +27,16 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="ProjectId" id="1XsIJG4m4SQwjBT670KUVa8P7cJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/json-20190722.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -62,10 +79,22 @@
       <option name="presentableId" value="Default" />
       <updated>1581828301087</updated>
       <workItem from="1581828302627" duration="3546000" />
+      <workItem from="1581832106827" duration="260000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

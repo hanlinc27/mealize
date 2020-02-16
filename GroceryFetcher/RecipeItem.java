@@ -17,6 +17,6 @@ class RecipeItem implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        return this.score - ((RecipeItem) o).score;
+        return ((RecipeItem) o).score - this.score;
     }
 }
